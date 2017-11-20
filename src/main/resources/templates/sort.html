@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Sort</title>
+</head>
+
+<body bgcolor="#99CC66">
+    <img src="img/FileSortNav.png" style="max-width: 100%";>
+    <font color="#4D4D4D" face="Arial" size="4">
+        <hr>
+        <center>
+            <form method="post" th:action="@{/sort}" th:object="${userInput}">
+                <input type="submit" name="sortByScary" value="Sort by scary" size="5" style="width:49%; height: 35px; background-color: darkorange">
+                <input type="submit" name="sortByName" value="Sort by name" size="5" style="width:49%; height: 35px; background-color: darkorange"><br>
+            </form>
+        </center>
+        <hr>
+        <i><p th:if="${list}!=null" th:text="${list}"></p></i>
+    </font>
+    <hr>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>File</title>
+</head>
+
+<body bgcolor="#99CC66">
+    <img src="img/FileSortNav.png" style="max-width: 100%";>
+    <font color="#4D4D4D" face="Arial" size="4">
+        <hr>
+        <center>
+        <form method="post" th:action="@{/file}" th:object="${userInput}" style="margin-left: 10%">
+            type text that will be added to your file: <br>
+            <textarea rows="4" cols="50" th:field="*{input}" style="width: 50%"></textarea><br><br>
+            <input type="submit" name="addText" value="Add this text to file" size="5" style="width:50%; height: 35px; background-color: darkorange"><br><br>
+            <input type="submit" name="clearFile" value="Clear file" size="5" style="width:50%; height: 35px; background-color: darkorange"><br>
+        </form>
+        </center>
+        <hr>
+        <i><p th:if="${current}!=null" th:text="${current}"></p></i>
+    </font>
+    <hr>
+</body>
+</html>
