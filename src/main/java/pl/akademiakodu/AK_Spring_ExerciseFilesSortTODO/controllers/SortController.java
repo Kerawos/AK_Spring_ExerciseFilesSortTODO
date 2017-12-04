@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import pl.akademiakodu.AK_Spring_ExerciseFilesSortTODO.models.Monster;
-import pl.akademiakodu.AK_Spring_ExerciseFilesSortTODO.models.SortExercise;
+import pl.akademiakodu.AK_Spring_ExerciseFilesSortTODO.models.services.SortExercise;
 
 import java.util.List;
 
