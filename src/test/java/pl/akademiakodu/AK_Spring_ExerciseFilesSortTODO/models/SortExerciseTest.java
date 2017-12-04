@@ -1,5 +1,8 @@
 package pl.akademiakodu.AK_Spring_ExerciseFilesSortTODO.models;
 
+/**
+ * Import section
+ */
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -11,8 +14,14 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
+/**
+ * Class responsible for integration test of sorting
+ */
 public class SortExerciseTest {
 
+    /**
+     * 3 different services
+     */
     private static SortExercise sortExercise;
     private static NameComparator nameComparator;
     private static ScaryComparator scaryComparator;
@@ -29,7 +38,11 @@ public class SortExerciseTest {
         scaryComparator = null;
     }
 
-    @Test public void test() throws Exception {
+    /**
+     * Method testing sorting
+     * @throws Exception in case of user input error
+     */
+    @Test public void testSeorService() throws Exception {
         List<Monster> actualList = sortExercise.generateMonsterList();
 
         List<Monster> expectedList = Arrays.asList(
@@ -64,6 +77,12 @@ public class SortExerciseTest {
         arrayComparator(actualList, expectedList);
         System.out.println(sortExercise.listToString(expectedList));
     }
+
+    /**
+     * Method responsible for compare two arrays each to other
+     * @param actual
+     * @param expected
+     */
     private void arrayComparator(List<Monster> actual, List<Monster> expected){
         for (int i = 0; i < actual.size(); i++) {
             for (int j = i; j < expected.size(); j++) {

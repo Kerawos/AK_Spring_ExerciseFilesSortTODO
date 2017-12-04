@@ -1,5 +1,8 @@
 package pl.akademiakodu.AK_Spring_ExerciseFilesSortTODO.models;
 
+/**
+ * Import section
+ */
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -10,21 +13,26 @@ import java.io.IOException;
 
 import static org.junit.Assert.*;
 
+/**
+ * Class responsible for test file exercise logic
+ */
 public class FileExerciseTest {
+
     private static FileExercise fileExercise;
 
-    @BeforeClass
-    public static void start() {
+    @BeforeClass public static void start() {
         fileExercise = new FileExercise();
     }
 
-    @AfterClass
-    public static void stop() throws Exception {
+    @AfterClass public static void stop() throws Exception {
         fileExercise = null;
     }
 
-    @Test
-    public void testInOut() throws Exception {
+    /**
+     * Method testing writing and reading from testing file
+     * @throws Exception in case of user input error
+     */
+    @Test public void testInOut() throws Exception {
         File file = new File("FileToTest.txt");
         if (!file.exists()){
             try {
@@ -42,8 +50,11 @@ public class FileExerciseTest {
         file.delete();
     }
 
-    @Test
-    public void automateTest() throws Exception {
+    /**
+     * Method testing writing and reading from testing file
+     * @throws Exception in case of user input error
+     */
+    @Test public void automateTest() throws Exception {
         File file = fileExercise.createNewFile("automateFile.txt");
         fileExercise.clearFile(file);
         assertEquals("", fileExercise.readFromFile(file));
