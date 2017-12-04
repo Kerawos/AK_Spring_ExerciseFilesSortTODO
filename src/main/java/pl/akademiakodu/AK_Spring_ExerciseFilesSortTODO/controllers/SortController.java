@@ -23,7 +23,7 @@ public class SortController {
     /**
      * Declarations
      */
-    @Autowired private SortExercise sortExercise;
+    @Autowired private SortExercise sortExercise = new SortExercise(); //init for monster list below
     private List<Monster> monsterList = sortExercise.generateMonsterList();
 
     /**
